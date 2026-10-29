@@ -1,12 +1,12 @@
-"use client";
+// "use client";
 
-import { createAuthClient } from "better-auth/react";
+// import { createAuthClient } from "better-auth/react";
 
-export const authClient = createAuthClient({
-  baseURL: process.env.NEXT_PUBLIC_DOMAIN_WEB_URL 
-});
+// export const authClient = createAuthClient({
+//   baseURL: process.env.https://bdbazer.vercel.app/
+// });
 
-export const { signIn, signUp, signOut, useSession } = authClient;
+// export const { signIn, signUp, signOut, useSession } = authClient;
 
 
 
@@ -24,12 +24,12 @@ export const { signIn, signUp, signOut, useSession } = authClient;
 // export const { signIn, signUp, signOut, useSession } = authClient;
 
 
-// "use client";
+"use client";
 
-// import { createAuthClient } from "better-auth/react";
+import { createAuthClient } from "better-auth/react";
 
-// export const authClient = createAuthClient({
-//   baseURL: "https://bdbazercom.vercel.app"
-// });
+export const authClient = createAuthClient({
+  baseURL: "https://bdbazer.vercel.app/"
+});
 
-// export const { signIn, signUp, signOut, useSession } = authClient;
+export const { signIn, signUp, signOut, useSession } = authClient;

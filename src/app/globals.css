@@ -1,26 +1,53 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Bazardor theme, colors taken from the Figma variables */
+@plugin "daisyui/theme" {
+  name: "bazardor";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fafcfa;
+  --color-base-200: #f0f5f0;
+  --color-base-300: #e1e8e1;
+  --color-base-content: #1d271f;
+  --color-primary: #05893e;
+  --color-primary-content: #f3fbf4;
+  --color-secondary: #187146;
+  --color-secondary-content: #f3fbf4;
+  --color-accent: #1a9951;
+  --color-accent-content: #f3fbf4;
+  --color-neutral: #1d271f;
+  --color-neutral-content: #fafcfa;
+  --color-info: #2563eb;
+  --color-info-content: #ffffff;
+  --color-success: #1a9951;
+  --color-success-content: #f3fbf4;
+  --color-warning: #f59e0b;
+  --color-warning-content: #1d271f;
+  --color-error: #d03739;
+  --color-error-content: #fff6f5;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html { scroll-behavior: smooth; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.animate-marquee {
+  animation: marquee 100s linear infinite;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

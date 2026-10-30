@@ -102,7 +102,7 @@ const Navbar = () => {
           </span>
           <span className="flex flex-col">
             <span className="text-xl font-bold leading-7 tracking-tight">বাজার দর</span>
-
+{/* small device time fixed */}
             <span suppressHydrationWarning className=" text-xs leading-4 text-base-content/60 sm:block">
 
               {getBanglaDate()}

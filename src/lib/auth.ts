@@ -10,10 +10,10 @@ export const auth = betterAuth({
   baseURL: process.env.BETTER_AUTH_URL || "https://bdbazer.vercel.app", 
   
   // ২. trustedOrigins যোগ করুন
-  trustedOrigins: [
-    "https://bdbazer.vercel.app",
-    "http://localhost:3000" // লোকাল টেস্টিং এর জন্য
-  ],
+  // trustedOrigins: [
+  //   "https://bdbazer.vercel.app",
+  //   "http://localhost:3000" // লোকাল টেস্টিং এর জন্য
+  // ],
 
   emailAndPassword: { enabled: true },
   socialProviders: {

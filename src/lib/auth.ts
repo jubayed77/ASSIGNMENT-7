@@ -6,6 +6,15 @@ const client = new MongoClient(process.env.MONGODB_URI as string);
 const db = client.db("bazardor");
 
 export const auth = betterAuth({
+  // ১. baseURL যোগ করুন
+  baseURL: process.env.BETTER_AUTH_URL || "https://bdbazer.vercel.app", 
+  
+  // ২. trustedOrigins যোগ করুন
+  trustedOrigins: [
+    "https://bdbazer.vercel.app",
+    "http://localhost:3000" // লোকাল টেস্টিং এর জন্য
+  ],
+
   emailAndPassword: { enabled: true },
   socialProviders: {
     google: {

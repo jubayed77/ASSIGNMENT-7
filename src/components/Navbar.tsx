@@ -103,7 +103,7 @@ const Navbar = () => {
           <span className="flex flex-col">
             <span className="text-xl font-bold leading-7 tracking-tight">বাজার দর</span>
 
-            <span suppressHydrationWarning className="hidden text-xs leading-4 text-base-content/60 sm:block">
+            <span suppressHydrationWarning className=" text-xs leading-4 text-base-content/60 sm:block">
 
               {getBanglaDate()}
             </span>

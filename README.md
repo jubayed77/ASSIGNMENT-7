@@ -52,11 +52,3 @@ src/
 ├── lib/          auth, auth-client ও helper function
 └── proxy.ts      route protection
 
-
-## Deploy (Vercel)
-
-1. GitHub এ push করুন।
-2. Vercel এ New Project থেকে repo select করুন।
-3. `.env.local` এর সব variable যোগ করুন। `BETTER_AUTH_URL` ও `NEXT_PUBLIC_APP_URL` এ Vercel এর URL দিন।
-4. Google ও GitHub OAuth এর callback URL এ Vercel এর URL বসান।
-5. Deploy করুন।
